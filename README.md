@@ -36,7 +36,7 @@ Attribute Information:
 - `model_n=40.bin` binary file with trained model and dictvectorizer
 - `healthcare-dataset-stroke-data.csv` dataset
 - `Pipfile` and `Pipfile.lock` files with dependencies for environment
-- `train.py` a python script to create a web service based on the model
+- `predict.py` a python script to create a web service based on the model
 - `request.py` a python script to send a request to the service and check it's work
 - `Dockerfile` a script to generate docker container
 
