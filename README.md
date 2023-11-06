@@ -41,14 +41,6 @@ Attribute Information:
 - `Dockerfile` a script to generate docker container
 
 ## How to install dependencies
-Clone the project
-```bash
-  git clone https://github.com/boiarchuk-m/Stroke-prediction
-```
-Go to the project directory
-```bash
-  cd Stroke-prediction
-```
 If you don't have `pipenv`, install it using this command
 ```bash
   pip install pipenv
