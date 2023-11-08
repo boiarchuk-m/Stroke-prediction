@@ -125,5 +125,5 @@ Deploy image
 gcloud run deploy mid-project gcr.io/midterm-project-404508/mid_project --port 9696 --platform managed --region us-central1
 ```
 
-Here is a url for this cloud service: https://mid-project-2gonzmac4a-uc.a.run.app/predict
+Here is a url for this cloud service: https://mid-project-2gonzmac4a-uc.a.run.app/predict 
 Also, you can use the file `request_cloud.py` that uses this link to make a request.
