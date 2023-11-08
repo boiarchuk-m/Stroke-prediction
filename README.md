@@ -39,6 +39,7 @@ Attribute Information:
 - `predict.py` a python script to create a web service based on the model
 - `request.py` a python script to send a request to the service and check it's work
 - `Dockerfile` a script to generate docker container
+- `request_cloud.py` a python script to send a request to the cloud service
 
 ## How to install dependencies
 If you don't have `pipenv`, install it using this command
@@ -91,3 +92,37 @@ Now, just use the command below and the model will be served to your local host,
 ```bash
    docker run -it -p 9696:9696 stroke-prediction:latest
 ```
+
+## Cloud deployment
+
+The web service was deployed to the google cloud and here are steps how I made it.
+
+First you need to install the gcloud CLI.There is an instructions form google how to make it: https://cloud.google.com/sdk/docs/install
+
+Then you need to open the Google Cloud CLI shell and log in your account 
+```bash
+    gcloud auth login
+```
+After this you need to configure Docker 
+```bash
+    gcloud auth configure-docker
+```
+Then, create a project
+```bash
+    gcloud config set project midterm-project-404508
+```
+Tag an image 
+```bash
+docker tag mid_project gcr.io/midterm-project-404508/mid_project
+```
+Push image to Google Container Registry
+```bash
+docker push gcr.io/midterm-project-404508/mid_project
+```
+Deploy image
+```bash
+gcloud run deploy mid-project gcr.io/midterm-project-404508/mid_project --port 9696 --platform managed --region us-central1
+```
+
+Here is a url to test this cloud service: https://mid-project-2gonzmac4a-uc.a.run.app/predict
+Also, you can use the file `request_cloud.py` that uses this link to make a request.
