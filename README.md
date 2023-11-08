@@ -7,6 +7,7 @@
 - [Host the server](https://github.com/boiarchuk-m/Stroke-prediction/tree/main#host-the-server)
 - [Making a prediction](https://github.com/boiarchuk-m/Stroke-prediction/tree/main#making-a-prediction)
 - [Docker containerization](https://github.com/boiarchuk-m/Stroke-prediction/tree/main#docker-containerization)
+- [Cloud deployment](https://github.com/boiarchuk-m/Stroke-prediction/tree/main#cloud-deployment)
 
 ## Problem description
 According to the World Health Organization (WHO), stroke is the second leading cause of death worldwide, accounting for about 11% of all deaths.Early diagnosis and treatment of stroke is essential to reduce  mortality and related morbidity.
